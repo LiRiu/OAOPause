@@ -287,11 +287,10 @@ contract OAOPause is AIOracleCallbackReceiver {
     }
 
     function _requestJudgement(uint256 bountyId, bytes memory beforeStatus, bytes memory afterStatus, address payReceiver) internal {
-        // lcf: 拼接beforeStatus 和 afterStatus。
         bytes memory input = bytes(afterStatus);
 
         uint256 requestId = aiOracle.requestCallback{value: address(this).balance}(
-            11, input, address(this), 500000000, "" //lcf:更正此处
+            11, input, address(this), 500000000, ""
         );
         AIOracleRequest storage request = requests[requestId];
         request.input = input;
@@ -334,7 +333,7 @@ contract OAOPause is AIOracleCallbackReceiver {
                 console.logBytes(errData);
                 _requestJudgement(bountyId, beforeStatus, errData, payReceiver);
                 console.log("request success");
-                LibSandbox.handleSandboxCallRevert(errData, true); //lcf:这个可能需要改成true
+                LibSandbox.handleSandboxCallRevert(errData, true);
             }
         }
     }

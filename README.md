@@ -1,13 +1,16 @@
-# Sample Hardhat Project
+# OAOPause
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract.
+Use AI to determine if the PoC submitted by white hat hackers is valid.
 
 Try running some of the following tasks:
 
 ```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat ignition deploy ./ignition/modules/Lock.js
+git clone https://github.com/LiRiu/OAOPause.git
+cd OAOPause && npm install
+
+npx hardhat node --fork <YOUR-SEPOLIA-RPC>
+
+# Another Terminal
+npx hardhat run script/test.js
+
 ```

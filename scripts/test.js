@@ -71,6 +71,7 @@ async function claimRequest(oao_pause_address, secret_protocol_bounty_deployer_a
     }
     );
   console.log("claimRequest is in txhash: " + claimRequest.hash);
+  console.log("[+] Request AI Adjudgement SUCCESS!!");
 }
 
 deploy();
