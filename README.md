@@ -14,3 +14,6 @@ npx hardhat node --fork <YOUR-SEPOLIA-RPC>
 npx hardhat run script/test.js
 
 ```
+
+# Taikai Hackthon
+[ETHTAIPEI HACKATHON 2024](https://taikai.network/ethtaipei/hackathons/hackathon-2024/projects/clu4sf7s30k0cwc019pwduzgj/idea)
